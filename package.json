@@ -1,6 +1,6 @@
 {
   "name": "wesovi-react-components",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Implementing reusable react components",
   "main": "index.js",
   "contributors": [
@@ -29,6 +29,8 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "bumped": "^0.9.1",
+    "bumped-finepack": "^0.2.3",
+    "bumped-terminal": "^0.7.1",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.4.2",
     "enzyme": "^2.3.0",
