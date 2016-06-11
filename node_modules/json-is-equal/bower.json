@@ -1,0 +1,33 @@
+{
+  "name": "json-is-equal",
+  "description": "Compare two JSON and return the result",
+  "homepage": "https://github.com/Kikobeats/json-is-equal",
+  "version": "1.0.0",
+  "main": "./dist/json-is-equal.js",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "authors": [
+    "Kiko Beats <%= email %>"
+  ],
+  "repository": "Kikobeats/json-is-equal",
+  "bugs": {
+    "url": "https://github.com/Kikobeats/json-is-equal/issues"
+  },
+  "keywords": [
+    "JSON",
+    "compare",
+    "comparison",
+    "equal"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}

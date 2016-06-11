@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>json-is-equal</title>
+</head>
+<body>
+  <script src="json-is-equal.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var isEqual = require('json-is-equal');
+    var objt1 = {
+      foo: 'bar',
+      hello: 'world'
+    };
+    var objt2 = {
+      hello: 'world',
+      foo: 'bar'
+    };
+    console.log(isEqual(objt1, objt2));
+  </script>
+</body>
+</html>
