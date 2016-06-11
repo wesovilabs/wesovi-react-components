@@ -1,16 +1,21 @@
 {
   "name": "wesovi-react-components",
-  "version": "1.0.0",
   "description": "Implementing reusable react components",
+  "version": "1.0.1",
   "main": "index.js",
+  "author": {
+    "name": "Iván Corrales Solera",
+    "email": "developer@wesovi.com",
+    "url": "http://www.wesovi.com"
+  },
   "contributors": [
     {
       "name": "Iván Corrales Solera",
       "email": "developer@wesovi.com",
-      "twitter": "@wesovi",
       "url": "http://www.wesoilabs.com"
     }
   ],
+  "keywords": [],
   "dependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "3.7.0",
@@ -52,18 +57,16 @@
     "webpack-hot-middleware": "^2.10.0",
     "webpack-node-externals": "^1.2.0"
   },
-  "keywords": [],
   "scripts": {
-    "clean": "rm -rf dist",
     "build": "webpack",
-    "prebuild": "npm run clean",
-    "prepublish": "npm run build",
-    "release": "bumped release",
+    "clean": "rm -rf dist",
     "lint": "npm run lint:components",
     "lint:components": "eslint --config=./.eslintrc src/*.js src/**/*.js",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run build",
+    "release": "bumped release 1.0.1",
     "test": "mocha test/helpers/browser.js test/*.spec.js",
     "test:watch": "npm run test --watch --watch-extensions js"
   },
-  "author": "Iván Corrales Solera <developer@wesovi.com> (http://www.wesovi.com)",
   "license": "ISC"
 }
