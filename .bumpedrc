@@ -1,7 +1,6 @@
 files: [
-  'package.json'
+  "package.json"
 ]
-
 plugins:
   prerelease:
     'Linting config files':
