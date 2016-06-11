@@ -61,7 +61,7 @@
     "release": "bumped release",
     "lint": "npm run lint:components",
     "lint:components": "eslint --config=./.eslintrc src/*.js src/**/*.js",
-    "test": "mocha -w test/helpers/browser.js test/*.spec.js",
+    "test": "mocha test/helpers/browser.js test/*.spec.js",
     "test:watch": "npm run test --watch --watch-extensions js"
   },
   "author": "Iván Corrales Solera <developer@wesovi.com> (http://www.wesovi.com)",
