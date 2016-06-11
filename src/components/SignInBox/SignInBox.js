@@ -1,5 +1,4 @@
 import React from 'react';
-import Styles from './SignIn.scss';
 
 class SignInBox extends React.Component {
 
@@ -23,7 +22,7 @@ class SignInBox extends React.Component {
 
   render() {
     return (
-      <form className={Styles.form}>
+      <form className='wsvform'>
         <input
           type="text"
           placeholder={this.props.lbUsername}
@@ -44,12 +43,12 @@ class SignInBox extends React.Component {
 }
 
 SignInBox.propTypes = {
+  credentials: React.PropTypes.object.isRequired,
   handleClickButtonFn: React.PropTypes.func.isRequired,
   handleChangesInForm: React.PropTypes.func,
   lbUsername: React.PropTypes.string,
   lbPassword: React.PropTypes.string,
   lbButton: React.PropTypes.string,
-  credentials: React.PropTypes.object.isRequired,
 };
 
 SignInBox.contextTypes = {

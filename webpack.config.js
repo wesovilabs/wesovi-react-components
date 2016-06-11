@@ -1,27 +1,26 @@
-const pkg = require('./../package');
+const pkg = require('./package');
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const config = require('./config/_development');
+
+
 
 ;
 
 module.exports = {
   context: __dirname,
   devtool: 'inline-source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './test/index.js'
-  ],
+  entry: {
+    SignInBox: './src/components/SignInBox/SignInBox.js',
+  },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'spec.js',
+    filename: 'wesovi.react.components.spec.js',
     publicPath: '/build/'
   },
   resolve: {
-    extensions: ['', '.scss', '.js', '.json'],
-    packageMains: ['browser', 'web', 'browserify', 'main', 'style']
+    extensions: ['', '.scss', '.js', 'jsx','.json']
   },
   module: {
     preLoaders: [
@@ -39,16 +38,17 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap')
       }
     ]
   },
   postcss: [autoprefixer],
   eslint: {
-    configFile: './../.eslintrc'
+    configFile: './.eslintrc'
   },
+  postcss:[autoprefixer],
   plugins: [
-    new ExtractTextPlugin('spec.css', {allChunks: true}),
+    new ExtractTextPlugin('spec.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
