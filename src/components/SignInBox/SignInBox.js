@@ -22,7 +22,7 @@ class SignInBox extends React.Component {
 
   render() {
     return (
-      <form className='wsvform'>
+      <form className="wsvform">
         <input
           type="text"
           placeholder={this.props.lbUsername}
