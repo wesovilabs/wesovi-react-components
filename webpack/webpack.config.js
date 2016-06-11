@@ -1,8 +1,11 @@
-const pkg = require('./package');
+const pkg = require('./../package');
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const config = require('./config/_development');
+
+;
 
 module.exports = {
   context: __dirname,
@@ -42,7 +45,7 @@ module.exports = {
   },
   postcss: [autoprefixer],
   eslint: {
-    configFile: paths.project('.eslintrc')
+    configFile: './../.eslintrc'
   },
   plugins: [
     new ExtractTextPlugin('spec.css', {allChunks: true}),

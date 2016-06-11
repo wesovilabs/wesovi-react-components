@@ -19,6 +19,7 @@
     "node-sass": "3.7.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -38,7 +39,7 @@
   "keywords": [],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "node --harmony webpack",
+    "build": "node --harmony webpack/webpack.config.js",
     "lint": "npm run lint:components && npm run lint:examples",
     "lint:components": "eslint --config=./.eslintrc src/*.js src/**/*.js",
     "lint:examples": "eslint --config=./src/.eslintrc examples/**/**/*.js",
