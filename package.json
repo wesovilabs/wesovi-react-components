@@ -40,7 +40,7 @@
     "clean": "rm -rf dist",
     "build": "node --harmony webpack",
     "lint": "npm run lint:components && npm run lint:examples",
-    "lint:components": "eslint --config=./.eslintrc *.js src/*.js",
+    "lint:components": "eslint --config=./.eslintrc src/*.js src/**/*.js",
     "lint:examples": "eslint --config=./src/.eslintrc examples/**/**/*.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'test/**/*.@(js)'",
     "test:watch": "npm run test --watch --watch-extensions js"
