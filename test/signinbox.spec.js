@@ -16,18 +16,20 @@ const credentials = () => {
 }
 
 describe('<SignInBox/>', function () {
-  it('should have a button to display the SignInBox', function () {
+
+
+  it('should have a button to display the SignInBox', ()=> {
     const wrapper = shallow(<SignInBox credentials={credentials} handleClickButtonFn={clickButtonFn}/>);
     expect(wrapper.find('button')).to.have.length(1);
   });
 
-  it('should have props for username and password labels', function () {
+  it('should have props for username and password labels', ()=> {
     const wrapper = shallow(<SignInBox credentials={credentials} handleClickButtonFn={clickButtonFn}/>);
     expect(wrapper.props().lbUsername).to.be.defined;
     expect(wrapper.props().lbPassword).to.be.defined;
   });
 
-  it('should have a form whose className is wsvform',function(){
+  it('should have a form whose className is wsvform',()=>{
     const wrapper = shallow(<SignInBox credentials={credentials} handleClickButtonFn={clickButtonFn}/>);
     expect(wrapper.find('form')).to.have.className('wsvform')
   });

@@ -10,25 +10,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: {
-    SignInBox: './src/components/SignInBox/SignInBox.js',
-  },
+  devtool: 'inline-source-map',
+  entry: './examples/App.js',
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'wesovi.react.components.spec.js',
-    publicPath: '/build/'
+    path: path.join(__dirname, 'examples/build'),
+    filename: 'wesovi.react.components.example.js',
+    publicPath: '/examples/build/'
   },
   resolve: {
     extensions: ['', '.scss', '.js', 'jsx','.json']
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.(js|jsx)$/,
-        loaders: ['eslint'],
-        exclude: /node_modules/
-      }
-    ],
+
     loaders: [
       {
         test: /\.(js|jsx)$/,
@@ -37,15 +30,11 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass?sourceMap')
       }
     ]
   },
-  postcss: [autoprefixer],
-  eslint: {
-    configFile: './.eslintrc'
-  },
-  postcss:[autoprefixer],
+
   plugins: [
     new ExtractTextPlugin('spec.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),

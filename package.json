@@ -1,7 +1,7 @@
 {
   "name": "wesovi-react-components",
   "description": "Implementing reusable react components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "author": {
     "name": "Iván Corrales Solera",
@@ -59,6 +59,7 @@
   },
   "scripts": {
     "build": "webpack",
+    "examples": "webpack --config webpack.config.examples.js",
     "clean": "rm -rf dist",
     "lint": "npm run lint:components",
     "lint:components": "eslint --config=./.eslintrc src/*.js src/**/*.js",
@@ -66,7 +67,8 @@
     "prepublish": "npm run build",
     "release": "bumped release 1.0.1",
     "test": "mocha test/helpers/browser.js test/*.spec.js",
-    "test:watch": "npm run test --watch --watch-extensions js"
+    "test:watch": "npm run test --watch --watch-extensions js",
+    "localpublish":"npm pack"
   },
   "license": "ISC"
 }

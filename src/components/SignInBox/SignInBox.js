@@ -8,6 +8,7 @@ class SignInBox extends React.Component {
       lbUsername: 'Username',
       lbButton: 'Log in',
       handleChangesInForm: () => {},
+      formClassName: 'wsvform',
     };
   }
 
@@ -22,7 +23,7 @@ class SignInBox extends React.Component {
 
   render() {
     return (
-      <form className="wsvform">
+      <form className={this.props.formClassName}>
         <input
           type="text"
           placeholder={this.props.lbUsername}
@@ -49,6 +50,7 @@ SignInBox.propTypes = {
   lbUsername: React.PropTypes.string,
   lbPassword: React.PropTypes.string,
   lbButton: React.PropTypes.string,
+  formClassName: React.PropTypes.string,
 };
 
 SignInBox.contextTypes = {
