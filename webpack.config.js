@@ -14,9 +14,9 @@ module.exports = {
     SignInBox: './src/components/SignInBox/SignInBox.js',
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'lib'),
     filename: 'wesovi.react.components.js',
-    publicPath: '/build/'
+    publicPath: '/lib/'
   },
   resolve: {
     extensions: ['', '.css','.scss', '.js', 'jsx','.json']
