@@ -53,6 +53,7 @@ SignInBox.defaultProps = {
   lbUsername: 'Username',
   lbButton: 'Log in',
   handleChangesInForm: () => {},
+  handleClickButtonFn: () => {},
   formClassName: 'wsvform',
 }
 
