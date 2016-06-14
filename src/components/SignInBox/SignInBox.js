@@ -1,4 +1,5 @@
 import React from 'react';
+import Style from './SignInBox';
 
 class SignInBox extends React.Component {
 
@@ -23,7 +24,7 @@ class SignInBox extends React.Component {
 
   render() {
     return (
-      <form className={this.props.formClassName}>
+      <form className={Style[this.props.formClassName]}>
         <input
           type="text"
           placeholder={this.props.lbUsername}

@@ -15,11 +15,11 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'wesovi.react.components.spec.js',
+    filename: 'wesovi.react.components.js',
     publicPath: '/build/'
   },
   resolve: {
-    extensions: ['', '.scss', '.js', 'jsx','.json']
+    extensions: ['', '.css','.scss', '.js', 'jsx','.json']
   },
   module: {
     preLoaders: [
@@ -45,9 +45,8 @@ module.exports = {
   eslint: {
     configFile: './.eslintrc'
   },
-  postcss:[autoprefixer],
   plugins: [
-    new ExtractTextPlugin('spec.css', { allChunks: true }),
+    new ExtractTextPlugin('wesovi.react.components.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
