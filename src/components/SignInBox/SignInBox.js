@@ -3,16 +3,6 @@ import Style from './SignInBox';
 
 class SignInBox extends React.Component {
 
-  getDefaultProps() {
-    return {
-      lbPassword: 'Password',
-      lbUsername: 'Username',
-      lbButton: 'Log in',
-      handleChangesInForm: () => {},
-      formClassName: 'wsvform',
-    };
-  }
-
   fieldsUpdated(field) {
     this.props.handleChangesInForm(field, this);
   }
@@ -57,5 +47,13 @@ SignInBox.propTypes = {
 SignInBox.contextTypes = {
 
 };
+
+SignInBox.defaultProps = {
+  lbPassword: 'Password',
+  lbUsername: 'Username',
+  lbButton: 'Log in',
+  handleChangesInForm: () => {},
+  formClassName: 'wsvform',
+}
 
 export default SignInBox;
